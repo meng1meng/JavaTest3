@@ -1,0 +1,11 @@
+FROM registry.saas.hand-china.com/hap-cloud/base:latest
+
+mvn clean package
+
+ADD target/App.jar app.jar
+
+RUN java -jar App.jar
+
+ADD target/test2.jar test2.jar
+
+RUN java -jar test2.jar

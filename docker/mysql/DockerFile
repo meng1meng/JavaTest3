@@ -1,0 +1,5 @@
+FROM registry.saas.hand-china.com/tools/mysql:5.6
+
+RUN mysql -u root -p
+RUN source sakila-schema.sql
+RUN source sakila-data.sql
